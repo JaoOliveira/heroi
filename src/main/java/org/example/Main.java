@@ -6,6 +6,7 @@ public class Main {
         heroi.setName("João");
         heroi.setXp(8000);
 
-        System.out.println(Servico.getNivel(heroi));
+      //  System.out.println(Servico.getNivel(heroi));
+        System.out.println(Servico.getRanked(200,100));
     }
 }
