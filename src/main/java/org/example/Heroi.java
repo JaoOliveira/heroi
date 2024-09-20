@@ -1,15 +1,9 @@
 package org.example;
 
-import java.util.Objects;
-
 public class Heroi {
     private String name;
-    private int xp;
-
-    public Heroi() {
-        this.name = name;
-        this.xp = xp;
-    }
+    private int idade;
+    private Tipo tipo;
 
     public String getName() {
         return name;
@@ -19,24 +13,42 @@ public class Heroi {
         this.name = name;
     }
 
-    public int getXp() {
-        return xp;
+    public int getIdade() {
+        return idade;
     }
 
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        Heroi heroi = (Heroi) o;
-        return Objects.equals(name, heroi.name) && Objects.equals(xp, heroi.xp);
+    public void setIdade(int idade) {
+        this.idade = idade;
     }
 
-    @Override
-    public int hashCode() {
-        return Objects.hash(name, xp);
+    public Tipo getTipo() {
+        return tipo;
     }
 
-    public void setXp(int xp) {
-        this.xp = xp;
+    public void setTipo(Tipo tipo) {
+        this.tipo = tipo;
+    }
+
+    public Heroi() {
+        this.name = name;
+        this.idade = idade;
+        this.tipo = tipo;
+    }
+
+    String atacar(Tipo tipo){
+        String ataque;
+        if(tipo.name().equals("guerreiro")){
+            ataque =  "espada";
+        }else if(tipo.name().equals("mago")){
+            ataque =  "magia";
+        }else if(tipo.name().equals("monge ")){
+            ataque =  "artes marciais";
+        }else if(tipo.name().equals("ninja")){
+            ataque =  "shuriken";
+        }else{
+            ataque =  "um revolver";
+        }
+
+      return   "O " + tipo.name() + " atacou usando " + ataque;
     }
 }

@@ -1,4 +1,4 @@
-package org.example;
+/*package org.example;
 
 public class Servico {
    static String getNivel(Heroi heroi){
@@ -49,3 +49,4 @@ public class Servico {
 
     }
 }
+*/

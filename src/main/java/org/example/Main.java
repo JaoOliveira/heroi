@@ -4,9 +4,13 @@ public class Main {
     public static void main(String[] args) {
         Heroi heroi = new Heroi();
         heroi.setName("João");
-        heroi.setXp(8000);
+        heroi.setIdade(22);
+        heroi.setTipo(Tipo.guerreiro);
+        System.out.println(heroi.atacar(heroi.getTipo()));
 
       //  System.out.println(Servico.getNivel(heroi));
-        System.out.println(Servico.getRanked(200,100));
+      //  System.out.println(Servico.getRanked(200,100));
+
+
     }
 }
